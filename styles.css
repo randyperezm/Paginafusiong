@@ -1,0 +1,117 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background: #111;
+  color: #fff;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background: #000;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.hero {
+  text-align: center;
+  padding: 120px 20px;
+  color: #fff;
+
+  /* Fondo con imagen */
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.7)
+  ),
+  url("img/hero.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero button {
+  background: #c49b63;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.horarios, .festival, .galeria {
+  padding: 40px 20px;
+}
+
+footer {
+  background: #000;
+  text-align: center;
+  padding: 20px;
+}
+
+.tabla-horarios {
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+.fila {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  padding: 15px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.fila div {
+  padding: 5px;
+}
+
+.encabezado {
+  background: #c49b63;
+  color: #000;
+  font-weight: bold;
+}
+
+.fila:not(.encabezado):nth-child(even) {
+  background: rgba(255,255,255,0.05);
+}
+
+
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.galeria img {
+  width: 400px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.galeria img:hover {
+  transform: scale(1.05);
+}
